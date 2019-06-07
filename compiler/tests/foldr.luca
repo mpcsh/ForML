@@ -1,0 +1,7 @@
+let
+  val foldr = fn f init xs =>
+    if nil? xs
+    then init
+    else f (hd xs) (foldr f init (tl xs))
+in
+  foldr

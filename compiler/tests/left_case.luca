@@ -1,0 +1,3 @@
+case (Left 5)
+  of Left x => fn _ => 6
+   | Right _ => fn _ => 4

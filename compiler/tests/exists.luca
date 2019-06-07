@@ -1,0 +1,9 @@
+let
+  val exists? = fn f xs =>
+    if nil? xs
+    then false
+    else if f (hd xs)
+    then true
+    else exists? f (tl xs)
+in
+  exists?

@@ -1,0 +1,15 @@
+let
+  val rev' = fn xs acc =>
+    if nil? xs
+    then acc
+    else rev' (tl xs) (cons (hd xs) acc)
+
+  val rev = fn xs =>
+    rev' xs []
+
+  val concat = fn xs ys =>
+    if nil? ys
+    then xs
+    else concat (rev (cons (hd ys) (rev xs))) (tl ys)
+in
+  concat

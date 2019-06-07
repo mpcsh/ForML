@@ -1,0 +1,7 @@
+let
+  val length = fn xs =>
+    if nil? xs
+    then 0
+    else succ (length (tl xs))
+in
+  length

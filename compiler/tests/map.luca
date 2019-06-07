@@ -1,0 +1,7 @@
+let
+  val map: ('a -> 'b) -> 'a list -> 'b list = fn f xs =>
+    if nil? xs
+    then []
+    else cons (f (hd xs)) (map f (tl xs))
+in
+  map
