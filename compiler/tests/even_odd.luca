@@ -1,0 +1,12 @@
+let
+  val even = fn n =>
+    if zero? n
+    then true
+    else odd (pred n)
+
+  val odd = fn n =>
+    if zero? n
+    then false
+    else even (pred n)
+in
+  (even, odd)

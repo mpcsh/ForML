@@ -1,0 +1,7 @@
+let
+  val foldl = fn f init xs =>
+    if nil? xs
+    then init
+    else foldl f (f (hd xs) init) (tl xs)
+in
+  foldl

@@ -1,0 +1,50 @@
+t ::=
+  true
+  false
+  nv
+  ()
+  str
+
+  [t, t, ...]
+  (t, t)
+  Left t
+  Right t
+
+  if t then t else t
+  case t of Some x => t | None => t
+  case t of Left x => t | Right x => t
+
+  fn x x ... => t
+  x(t)(t)(...)
+  (t)(t)(t)(...)
+  x
+
+  let dec ... in t
+
+dec ::=
+  x = t
+  x: ty = t
+
+nv ::=
+  0
+  1
+  ...
+
+str ::=
+  "x"
+
+ty ::=
+  int
+  bool
+  string
+  unit
+  tyvar
+
+  ty list
+  ty option
+
+  ty -> ty
+  ty * ty
+  ty | ty
+
+  (ty)

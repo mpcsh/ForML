@@ -1,0 +1,10 @@
+let
+  val plus = fn x y =>
+    if zero? y
+    then x
+    else plus (succ x) (pred y)
+
+  val curried_add = fn x =>
+    fn y => plus x y
+in
+  curried_add
